@@ -16,3 +16,7 @@ describe 'a game board', ->
   it 'should find the end from 1 space away', ->
     @board = new Board(2, 2, [0, 0], [1, 0])
     expect(@board.findPath().length).toBe(2)
+
+  it 'should find the end from further away', ->
+    @board = new Board(3, 3, [0, 0], [1, 2])
+    expect(@board.findPath().length).toBe(4)
